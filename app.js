@@ -24,6 +24,11 @@ function addEmployee() {
         <td>${annualSalary}</td>
         <td><button id="delete">Delete</button></td>`;
     $('table tbody').append(markup);
+    $('#firstNameIn').val('');
+    $('#lastNameIn').val('');
+    $('#idNumIn').val('');
+    $('#titleIn').val('');
+    $('#annSalIn').val('');
 }
 
 function deleteRow() {
