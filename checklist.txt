@@ -1,14 +1,14 @@
-[ ] html content and format
+[X] html content and format
     [X] headings
     [X] input forms and button
     [X] table
-    [ ] total cost
+    [X] total cost
 [ ] JavaScript
     [X] collect input data with jquery
     [X] append data to table
     [ ] update total
     [ ] clear input fields
     [ ] red background if total > 20k
-    [ ] delete button
+    [X] delete button
     [ ] total updates on delete
 [ ] CSS

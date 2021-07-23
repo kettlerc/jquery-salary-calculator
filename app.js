@@ -6,6 +6,7 @@ function onReady() {
     console.log('JQ');
     
     $(document).on('click', '#submit', addEmployee);
+    $(document).on('click', '#delete', deleteRow)
 }
 
 function addEmployee() {
@@ -20,6 +21,11 @@ function addEmployee() {
         <td>${lastName}</td>
         <td>${idNum}</td>
         <td>${title}</td>
-        <td>${annualSalary}</td>`;
+        <td>${annualSalary}</td>
+        <td><button id="delete">Delete</button></td>`;
     $('table tbody').append(markup);
+}
+
+function deleteRow() {
+    $(this).parent().parent().remove();
 }
