@@ -6,9 +6,13 @@
 [ ] JavaScript
     [X] collect input data with jquery
     [X] append data to table
-    [ ] update total
+    [X] update total
     [X] clear input fields
     [ ] red background if total > 20k
     [X] delete button
     [ ] total updates on delete
 [ ] CSS
+    [ ] headings
+    [ ] input forms
+    [ ] table
+    [ ] colors and space

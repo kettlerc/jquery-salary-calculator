@@ -7,7 +7,7 @@ $(document).ready(onReady);
 function onReady() {
     console.log('JQ');
     $(document).on('submit', '#inputForm', addEmployee);
-    $(document).on('click', '#delete', deleteRow)
+    $(document).on('click', '#delete', deleteRow);
 } //end onReady
 
 function addEmployee(event) {
@@ -22,6 +22,18 @@ function addEmployee(event) {
     employees.push(employee);
     console.log(employee);
 
+    renderToDom();
+
+    let total = 0;
+    for (let employee of employees) {
+        total += employee.annualSalary / 12;
+    };
+    $('#totalMonthlyCost').text(total);
+} //end addEmployee
+
+function renderToDom() {
+    $('table tbody').empty();
+    for (let employee of employees) {
     $('table tbody').append(`<tr>
         <td>${employee.firstName}</td>
         <td>${employee.lastName}</td>
@@ -29,18 +41,18 @@ function addEmployee(event) {
         <td>${employee.title}</td>
         <td>$${employee.annualSalary}</td>
         <td><button id="delete">Delete</button></td>`);
-
-    $('input').val('');
-
-    let total = 0;
-    for (let employee of employees) {
-        total += employee.annualSalary / 12;
     };
-
-    $('#totalMonthlyCost').text(total);
-} //end addEmployee
+    $('input').val('');
+} //end renderToDom
 
 function deleteRow() {
     $(this).parent().parent().remove();
+    
+    //NOT WORKING YET
+    // let total = $('totalMonthlyCost');
+    // for (let employee of employees) {
+    //     total -= employee.annualSalary / 12;
+    // };
+    // $('#totalMonthlyCost').text(total);
 } //end deleteRow
 
