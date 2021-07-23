@@ -5,12 +5,12 @@ $(document).ready(onReady);
 function onReady() {
     console.log('JQ');
     
-    $(document).on('click', '#submit', addEmployee);
+    $(document).on('submit', '#inputForm', addEmployee);
     $(document).on('click', '#delete', deleteRow)
-}
+} //end onReady
 
-function addEmployee() {
-    console.log('button works');
+function addEmployee(event) {
+    event.preventDefault();
     let firstName = $('#firstNameIn').val();
     let lastName = $('#lastNameIn').val();
     let idNum = $('#idNumIn').val();
@@ -29,8 +29,9 @@ function addEmployee() {
     $('#idNumIn').val('');
     $('#titleIn').val('');
     $('#annSalIn').val('');
-}
+} //end addEmployee
 
 function deleteRow() {
     $(this).parent().parent().remove();
-}
+} //end deleteRow
+

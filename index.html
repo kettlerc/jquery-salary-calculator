@@ -7,19 +7,25 @@
     <script src="jquery-3.6.0.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Salary Calculator</title>
 </head>
 <body>
     <h1 id="header">Salary Calculator</h1>
-    <div id="inputForm">
+    <form id="inputForm">
         <h2>Add Employee</h2>
+        <div class="formInputs">
         <input type="text" placeholder="First Name" id="firstNameIn">
         <input type="text" placeholder="Last Name" id ="lastNameIn">
+        </div>
+        <div class="formInputs">
         <input type="text" placeholder="ID" id="idNumIn">
         <input type="text" placeholder="Title" id="titleIn">
+        </div>
+        <div class="formInputs">
         <input type="number" placeholder="Annual Salary" id="annSalIn">
+        </div>
         <button id="submit">Submit</button>
-    </div>
+    </form>
     <div>
         <table id="employeeTable">
             <thead>
