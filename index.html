@@ -10,6 +10,32 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="header">Salary Calculator</h1>
+    <div id="inputForm">
+        <h2>Add Employee</h2>
+        <input type="text" placeholder="First Name" id="firstNameIn">
+        <input type="text" placeholder="Last Name" id ="lastNameIn">
+        <input type="text" placeholder="ID" id="idNumIn">
+        <input type="text" placeholder="Title" id="titleIn">
+        <input type="text" placeholder="Annual Salary" id="annSalIn">
+        <button>Submit</button>
+    </div>
+    <div>
+        <table id="employeeTable">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+                <th></th>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h2 id="totalCost">Total Monthly: $<span id="totalMonthlyCost"></span></h2>
+    </div>
 </body>
 </html>
