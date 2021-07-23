@@ -1,34 +1,43 @@
 console.log('JS');
 
+let employees = [];
+
 $(document).ready(onReady);
 
 function onReady() {
     console.log('JQ');
-    
     $(document).on('submit', '#inputForm', addEmployee);
     $(document).on('click', '#delete', deleteRow)
 } //end onReady
 
 function addEmployee(event) {
     event.preventDefault();
-    let firstName = $('#firstNameIn').val();
-    let lastName = $('#lastNameIn').val();
-    let idNum = $('#idNumIn').val();
-    let title = $('#titleIn').val();
-    let annualSalary = $('#annSalIn').val();
-    let markup = `<tr>
-        <td>${firstName}</td>
-        <td>${lastName}</td>
-        <td>${idNum}</td>
-        <td>${title}</td>
-        <td>${annualSalary}</td>
-        <td><button id="delete">Delete</button></td>`;
-    $('table tbody').append(markup);
-    $('#firstNameIn').val('');
-    $('#lastNameIn').val('');
-    $('#idNumIn').val('');
-    $('#titleIn').val('');
-    $('#annSalIn').val('');
+    let employee = {
+        firstName: $('#firstNameIn').val(),
+        lastName: $('#lastNameIn').val(),
+        idNum: $('#idNumIn').val(),
+        title: $('#titleIn').val(),
+        annualSalary: Number($('#annSalIn').val())
+    };
+    employees.push(employee);
+    console.log(employee);
+
+    $('table tbody').append(`<tr>
+        <td>${employee.firstName}</td>
+        <td>${employee.lastName}</td>
+        <td>${employee.idNum}</td>
+        <td>${employee.title}</td>
+        <td>$${employee.annualSalary}</td>
+        <td><button id="delete">Delete</button></td>`);
+
+    $('input').val('');
+
+    let total = 0;
+    for (let employee of employees) {
+        total += employee.annualSalary / 12;
+    };
+
+    $('#totalMonthlyCost').text(total);
 } //end addEmployee
 
 function deleteRow() {
