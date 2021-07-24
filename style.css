@@ -1,5 +1,6 @@
 body {
     background-color: #013A63;
+    padding: 30px
 }
 
 h1 {
@@ -30,6 +31,8 @@ input, #submit {
     margin: 10px;
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    padding: 5px;
 }
 
 table {
@@ -37,17 +40,23 @@ table {
     width: 95%;
     margin: auto;
     margin-top: 30px;
-    padding: 10px;
     border: 3px solid #012A4A;
 }
 
 thead, tbody {
     text-align: left;
     font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 th, td {
     width: 200px;
+}
+
+th {
+    background-color: #468FAF;
+    color: white;
+    font-weight: 100;
 }
 
 #totalCost {
