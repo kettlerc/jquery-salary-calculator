@@ -9,6 +9,8 @@ h1 {
     font-size: 4em;
     background-color: #012A4A;
     padding: 20px;
+    border: 5px solid white;
+    letter-spacing: .2em;
 }
 
 h2 {
@@ -17,5 +19,38 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     font-weight: 100;
+    font-size: 2em;
 }
 
+form {
+    background-color: #A9D6E5;
+}
+
+input, #submit {
+    margin: 10px;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    border: 3px solid #012A4A;
+}
+
+thead, tbody {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+th, td {
+    width: 200px;
+}
+
+#totalCost {
+    text-align: right;
+    font-weight: 600;
+}
