@@ -8,7 +8,7 @@
     [X] append data to table
     [X] update total
     [X] clear input fields
-    [ ] red background if total > 20k
+    [X] red background if total > 20k
     [X] delete button
     [ ] STRETCH: total updates on delete
 [X] CSS
