@@ -10,9 +10,9 @@
     [X] clear input fields
     [ ] red background if total > 20k
     [X] delete button
-    [ ] total updates on delete
-[ ] CSS
-    [ ] headings
-    [ ] input forms
-    [ ] table
-    [ ] colors and space
+    [ ] STRETCH: total updates on delete
+[X] CSS
+    [X] headings
+    [X] input forms
+    [X] table
+    [X] colors and space

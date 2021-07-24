@@ -63,3 +63,7 @@ th {
     text-align: right;
     font-weight: 600;
 }
+
+.inTheRed {
+    background-color: red;
+}

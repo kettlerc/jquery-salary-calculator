@@ -27,8 +27,13 @@ function addEmployee(event) {
     let total = 0;
     for (let employee of employees) {
         total += employee.annualSalary / 12;
+        
     };
     $('#totalMonthlyCost').text(total);
+    if (total > 20000) {
+        console.log('too much');
+        $('#totalCost').addClass('inTheRed');
+    }
 } //end addEmployee
 
 function renderToDom() {
@@ -47,12 +52,5 @@ function renderToDom() {
 
 function deleteRow() {
     $(this).parent().parent().remove();
-    
-    //NOT WORKING YET
-    // let total = $('totalMonthlyCost');
-    // for (let employee of employees) {
-    //     total -= employee.annualSalary / 12;
-    // };
-    // $('#totalMonthlyCost').text(total);
 } //end deleteRow
 
